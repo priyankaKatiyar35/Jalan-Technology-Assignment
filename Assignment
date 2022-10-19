@@ -1,0 +1,71 @@
+// ------------ Question-1 (code in javascript) --------------
+
+
+   // this method modifies a sorted array such that
+   // it consists of alternating maximum and minimum elements
+
+   function modify_array(array){
+    var array1=[...array]
+    for(var i = 0; i<array.length; i++){
+        if(1%2==0)
+        array[i]=array1.pop()
+        else
+        array[i]=array1.shift()
+    }
+   }
+    
+   //  certain test cases
+
+  // Test case 1: odd Number of Element
+  
+  let arr1 = [2,4,6,8,10]
+  modify_array(arr1)
+  console.log(arr1)
+
+ // Test case 1: even Number of Element
+  
+ let arr2 = [2,4,6,8]
+  modify_array(arr2)
+  console.log(arr2)
+
+
+ // Test case 1: Repeated values
+
+ let arr3 = [2,2,4,6,6]
+ modify_array(arr3)
+ console.log(arr3)
+
+
+// Test case 1: Unique Values
+
+let arr4 = [2,2,2,2,2]
+modify_array(arr4)
+console.log(arr4)
+
+
+/*  The time complexity of the provided program is: o(n)
+    The space complexity of the provided program is: o(n)   */
+
+
+
+// ---------------------- Question-2(code in python) ----------------------
+
+
+coffee_type = input("Enter the type of coffee:")
+def coffee_price(coffee_type):
+if coffee_type =="Espresso":
+milk = 60
+cream = 75
+latte = 100
+print("Price for coffee type Espresso is:",milk+cream+latte)
+elif coffee_type =="Cappuccino":
+milk = 80
+cream = 90
+latte = 125
+print("Price of coffee type Cappuccino is:",milk+cream+latte)
+elif coffee_type =="Latte":
+milk = 100
+cream = 125
+latte = 150
+print("Price of coffee type Latte is:",milk+cream+latte)
+coffee_price(coffee_type)
